@@ -1,0 +1,55 @@
+<h4 class="ui center aligned medium icon header">
+  <i class="circular coffee icon orange"></i>
+  Say something
+</h4>
+
+<div class="ui two column grid">
+  <!-- LEFT COLUMN -->
+  <div class="twelve wide column">
+    <!-- CHAT CARD -->
+    <div class="ui card fluid chatbox">
+      <header class="content">
+        <h4 class="ui header">Chatroom</h4>
+      </header>
+      <div class="content">
+        <div class="ui feed">
+          <%= render @messages %>
+        </div>
+      </div>
+      <div class="extra content">
+        <form action="#" class="ui reply form">
+          <div class="field">
+            <div class="ui fluid icon input">
+              <input type="text" placeholder="Enter message...">
+              <i class="bordered inverted orange edit icon"></i>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- RIGHT COLUMN -->
+  <div class="four wide column">
+    <!-- CHAT MENU -->
+    <div class="ui vertical inverted menu">
+      <a class="active item">
+        Inbox
+        <div class="ui teal left pointing label">1</div>
+      </a>
+      <a class="item">
+        Spam
+        <div class="ui label">51</div>
+      </a>
+      <a class="item">
+        Updates
+        <div class="ui label">1</div>
+      </a>
+      <div class="item">
+        <div class="ui transparent icon input">
+          <input type="text" placeholder="Search mail...">
+          <i class="search icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

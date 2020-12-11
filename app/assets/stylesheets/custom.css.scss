@@ -1,0 +1,8 @@
+@import "semantic-ui";
+
+.ui.card.chatbox {
+  height: 600px;
+  header {
+    flex-grow: 0;
+  }
+}
