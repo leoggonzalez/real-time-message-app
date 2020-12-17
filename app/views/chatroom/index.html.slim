@@ -1,0 +1,36 @@
+h4.ui.center.aligned.medium.icon.header
+  i.circular.coffee.icon.orange
+  | Say something
+.ui.two.column.grid
+  /! LEFT COLUMN
+  .twelve.wide.column
+    /! CHAT CARD
+    .ui.card.fluid.chatbox
+      header.content
+        h4.ui.header Chatroom
+      .content
+        .ui.feed
+          = render @messages
+      .extra.content
+        = form_for(@message, html: { class: 'ui reply form', role: 'form' }, url: message_path) do |f|
+          .field
+            .ui.fluid.icon.input
+              = f.text_field :body, placeholder: 'Enter message...', autofocus: true
+              = f.button '<i class="bordered inverted orange edit icon"></i>'.html_safe
+  /! RIGHT COLUMN
+  .four.wide.column
+    /! CHAT MENU
+    .ui.vertical.inverted.menu
+      a.active.item
+        | Inbox
+        .ui.teal.left.pointing.label 1
+      a.item
+        | Spam
+        .ui.label 51
+      a.item
+        | Updates
+        .ui.label 1
+      .item
+        .ui.transparent.icon.input
+          input placeholder=("Search mail...") type="text" /
+          i.search.icon

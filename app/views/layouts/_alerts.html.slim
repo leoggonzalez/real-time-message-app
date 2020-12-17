@@ -1,0 +1,5 @@
+- flash.each do |message_type, message_content| 
+  .ui.message.transition class=message_type
+    i.close.icon
+    .header
+      = message_content
