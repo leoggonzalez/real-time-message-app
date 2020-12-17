@@ -9,11 +9,18 @@ require("@rails/activestorage").start();
 require("channels");
 require("semantic-ui-sass");
 
+export function scrollToBottom(node) {
+  $(node).scrollTop(function () {
+    return this.scrollHeight;
+  });
+}
+
 $(document).on("turbolinks:load", function () {
   $(".ui.dropdown").dropdown();
   $(".message .close").on("click", function () {
     $(this).closest(".message").transition("fade");
   });
+  scrollToBottom(".chatroom__messages-wrapper");
 });
 
 // Uncomment to copy all static images under ../images to the output folder and reference
